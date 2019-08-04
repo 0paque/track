@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
+@import url('//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css');
+
+* {
+  font-family: 'Open Sans', sans-serif;
+  color: #0a4b59;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+input,
+textarea {
+  outline: none;
+  box-sizing: border-box;
+  resize: none;
+  box-shadow: none;
+}
+
+.labelledField > label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.labelledField > input {
+  display: block;
+  border: 0;
+  border-bottom: 1px solid #0a4b59;
+  background: none;
+  border-radius: 0;
+  width: 100%;
+  padding: 5px;
+}
+
+.labelledField > input:focus {
+  border-bottom: 1px solid #26717f;
+}
+
+.labelledField > h1 {
+  cursor: pointer;
+}
+
+.errored > input {
+  border-bottom: 1px solid #db5c43;
+}
+
+.labelledField > .errorMessage {
+  color: #db5c43;
+  font-size: 12px;
+  padding-top: 4px;
+  height: 20px;
+}
+
+.button:active {
+  border: 1px solid #0a4b59;
+}
+
+.app {
+  font-size: 14px;
+  height: 100%;
+}
+
+.expand {
+  height: 100%;
+}
+
+header {
+  position: relative;
+}
+
+header > h1 {
+  font-weight: bold;
+  font-size: 18px;
+  background-color: #26717f;
+  color: #fff;
+  padding: 5px;
+  padding-left: 10px;
+  margin: 0px;
+  text-align: center;
+  height: 44px;
+  line-height: 32px;
+  text-transform: capitalize;
+}
+
+header > .rightButtons {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  padding: 10px;
+  height: 44px;
+}
+
+header span {
+  font-size: 24px;
+  color: #fff;
+  margin-top: -2px;
+}
+
+header span:active {
+  color: #ccc;
+}
+
+header > .leftButtons {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  padding: 10px;
+  height: 44px;
+}
+
+.hidden {
+  display: none;
+}
+
+.setting {
+  margin-bottom: 1px;
+}
+.setting > div {
+  padding: 20px;
+  overflow: hidden;
+}
+
+.setting .saveButton {
+  float: right;
+  border: 1px solid #0a4b59;
+  padding: 5px;
+  width: 60px;
+  text-align: center;
+  margin-left: calc(100% - 40px);
+}
+
+.chat {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  height: calc(100% - 44px);
+}
+
+.messages {
+  flex: 1;
+  overflow-y: scroll;
+}
+
+.messageBubble {
+  width: 60%;
+  border: 1px solid #eee;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-family: 'Open Sans', sans-serif;
+  margin: 10px;
+  margin-bottom: 0;
+}
+
+.messages > .messageBubble:last-child {
+  margin-bottom: 10px;
+}
+
+.leftBubble {
+  float: left;
+  border-radius: 20px 20px 20px 3px;
+}
+
+.rightBubble {
+  float: right;
+  background-color: #fdeee8;
+  border: 1px solid #fce7e4;
+  border-radius: 20px 20px 3px 20px;
+}
+
+.messageBubble > .timestamp {
+  font-size: 10px;
+  float: right;
+  color: #ccc;
+}
+
+.messageInput {
+  position: relative;
+  border-top: 1px solid #ccc;
+  padding: 10px;
+  background-color: #f8f8f8;
+}
+.messageInput textarea {
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  padding: 10px 20px;
+  height: 42px;
+  width: calc(100% - 40px);
+  background-color: #fff;
+}
+
+.messageInput .sendButton {
+  position: absolute;
+  margin: 10px;
+  margin-right: 4px;
+  width: 42px;
+  height: 42px;
+  bottom: 0px;
+  right: 0px;
+  text-align: center;
+  font-size: 32px;
+}
+
+.messageInput .sendButton > .glyphicon {
+  color: #f2ac29;
+}
+
+.messageInput .sendButton.disabled > .glyphicon {
+  color: #ccc;
+}
+
+.lds-dual-ring {
+  display: inline-block;
+  width: 64px;
+  height: 64px;
+}
+.lds-dual-ring:after {
+  content: ' ';
+  display: block;
+  width: 46px;
+  height: 46px;
+  margin: 1px;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  border-color: #fff transparent #fff transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loading {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  padding-top: calc(40vh - 32px);
+  text-align: center;
+}
